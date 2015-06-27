@@ -1,4 +1,4 @@
-User.create!( name:     "Johc Chen",
+User.create!( name:     "John Chen",
               email:    "244405035@qq.com",
               password:                  "foobar",
               password_confirmation:     "foobar",
@@ -23,3 +23,11 @@ users = User.order(:created_at).take(6)
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.microposts.create!(content: content) }
 end
+
+# Following relationships
+users = User.all
+user  = users.first
+Following = users[2..50]
+Followers = users[3..40]
+Following.each { |followed| user.follow(followed) }
+Followers.each { |follower| follower.follow(user) }
