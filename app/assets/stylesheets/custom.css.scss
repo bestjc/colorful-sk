@@ -13,7 +13,10 @@ $gray-medium-light: #eaeaea;
 /* universal */
 body {
   padding-top: 60px;
+  background-image: url(bg.jpg);
 }
+
+
 
 section {
   overflow:auto;
@@ -57,18 +60,16 @@ p {
 }
 
 /* header */
+.container {
+  color:white;
+  width: 96%;
+}
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color:#fff;
-  letter-spacing: -1px;
+.navbar-brand {
+  padding-left:0;
   padding-top: 9px;
-  font-weight: bold;
-  &:lover {
-    color: #fff;
-    text-decoration: none;
+  img{
+    margin-left:6px;
   }
 }
 
@@ -79,6 +80,9 @@ footer {
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: #777;
+  position: absolute;
+  bottom: 0;
+  width: 95%;
   a {
     color: $gray-darker;
     &:hover {
