@@ -1,6 +1,6 @@
 <% if @feed_items.any? %>
   <% @feed_items.each do |feed_item| %>
-    <div class="grid-item col-md-2">
+    <div class="grid-item">
       <div href="#" class="thumbnail">
         <%= image_tag feed_item.picture.url if feed_item.picture? %>
         <div class="caption">
