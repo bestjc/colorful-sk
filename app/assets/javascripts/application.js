@@ -13,16 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= isotope.pkgd
-//= require fit-columns
+//= require isotope.pkgd
+//= require packery-mode.pkgd
 //= require turbolinks
 //= require_tree .
-$(document).ready( function() {
-    $('.grid').isotope({
-    percentPosition: true,
+$(document).ready(function() {
+  $('.grid').isotope({
+    layoutMode: 'packery',
     itemSelector: '.grid-item',
-    fitColumns: {
-      columnWidth: '.grid-sizer'
+    packery: {
+      gutter: 10
     }
-    });
   });
+});

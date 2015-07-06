@@ -14,12 +14,6 @@
  *= require_self
  */
 
-/* inherit height from window */
-html, body { 
-  padding-top: 30px;
-  background-color: #E7EAEC;
-  height: 100%;
-}
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -27,19 +21,20 @@ html, body {
 }
 
 /* inherit height from window */
-html, body { height: auto; }
+html, body { 
+  padding-top: 30px;
+  background-color: #E7EAEC;
+}
 
 body {
   font-family: sans-serif;
 }
 
-
 /* ---- grid ---- */
 
 .grid {
   background: #DDD;
-  margin: 0 auto;
-  border: 0;
+  max-width: 1244px;
 }
 
 /* clear fix */
@@ -51,15 +46,10 @@ body {
 
 /* ---- .grid-item ---- */
 
-.grid-item,
-.grid-sizer {
-  width: 236px;
-}
-
-.grid-item {
+.grid-item{
   float: left;
+  width: 236px;
   background: #DDD;
   border: 1px solid #white;
   border-color: hsla(0, 0%, 0%, 0.7);
 }
-
