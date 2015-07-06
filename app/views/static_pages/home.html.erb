@@ -1,4 +1,15 @@
 <% if logged_in? %>
+    <div class="container static-banner">
+      <div class="thumbnail user_info">
+        <%= render 'shared/user_info' %>
+        <%= render 'shared/stats' %>
+        <div class="caption">
+          <p>
+            <button type"button" class="btn btn-success btn-block" data-toggle="modal" data-target="#postModal">分　享</button>
+          </p>
+        </div>
+      </div>
+    </div>
     <div class="grid row">
       <%= render 'shared/feed' %>
     </div>
