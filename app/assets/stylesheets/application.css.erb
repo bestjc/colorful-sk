@@ -9,11 +9,47 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+ * background-image: url(<%= asset_path "bg.jpg" %>);
  *= require_tree .
  *= require_self
  */
- body {
-  padding-top: 60px;
-  background-image: url(<%= asset_path "bg.jpg" %>);
+
+/* inherit height from window */
+html, body { 
+  padding-top: 30px;
+  background-color: #E7EAEC;
 }
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+
+/* ---- grid ---- */
+
+.grid {
+  position: relative;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  width: 16.666%;
+ }
+
+.grid-item img {
+  width:238px;  
+ }

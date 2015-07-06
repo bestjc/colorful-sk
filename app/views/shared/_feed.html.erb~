@@ -1,0 +1,31 @@
+<div class="col-md-2">
+  <div class="thumbnail user_info">
+    <%= render 'shared/user_info' %>
+    <%= render 'shared/stats' %>
+    <div class="caption">
+      <p>
+        <button type"button" class="btn btn-success btn-block" data-toggle="modal" data-target="#postModal">分　享</button>
+      </p>
+    </div>
+  </div>
+</div>
+<% if @feed_items.any? %>
+  <% @feed_items.each do |feed_item| %>
+    <div class="col-md-2">
+      <div href="#" class="thumbnail">
+        <%= image_tag feed_item.picture.url if feed_item.picture? %>
+        <div class="caption">
+          <p>
+	    <%= feed_item.content %>
+	  </p>
+	  <p style="float:right;">
+	    ---- From @<%= link_to feed_item.user.name, feed_item.user %>
+	  </p>
+          <button class="btn btn-default btn-block" role="botton">采集</button>
+	    <!--<a href="#" class="btn btn-default" role="button">Button</a>-->
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <%= will_paginate @feed_items %>
+<% end %>
