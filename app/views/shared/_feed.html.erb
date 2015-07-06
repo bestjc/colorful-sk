@@ -2,9 +2,7 @@
   <div class="grid-sizer"></div>
   <% @feed_items.each do |feed_item| %>
     <div class="grid-item col-md-2">
-      <a href="#" class="thumbnail">
-        <%= image_tag feed_item.picture.url if feed_item.picture? %>
-      </a>
+      <%= link_to image_tag(feed_item.picture.url), "#", class: "thumbnail" if feed_item.picture? %>
       <!--<div class="caption">
         <p>
           <%= feed_item.content %>
