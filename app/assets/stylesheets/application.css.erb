@@ -20,18 +20,27 @@ html, body {
   background-color: #E7EAEC;
   height: 100%;
 }
-
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+/* inherit height from window */
+html, body { height: auto; }
+
+body {
+  font-family: sans-serif;
+}
+
 
 /* ---- grid ---- */
 
 .grid {
-  height: 75%;
+  background: #DDD;
+  width: 1496px;
+  margin: 0 auto;
+  border: 0;
 }
 
 /* clear fix */
@@ -43,16 +52,16 @@ html, body {
 
 /* ---- .grid-item ---- */
 
+.grid-item,
+.grid-sizer {
+  width: 236px;
+}
+
 .grid-item {
   float: left;
-  width: 250px;
-  border: 2px solid #333;
- }
-
-.grid-item img{
-  width: 246px;
+  background: #DDD;
+  border: 1px solid #white;
+  border-color: hsla(0, 0%, 0%, 0.7);
 }
 
-.caption {
-  width: 246px;
-}
+.grid-item img { width: 236px; margin-left:3px; margin-top:2px; }
