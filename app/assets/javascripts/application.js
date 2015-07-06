@@ -22,7 +22,7 @@ $(document).ready(function() {
     layoutMode: 'packery',
     itemSelector: '.grid-item',
     packery: {
-      gutter: 10
+      gutter: 15
     }
   });
 });

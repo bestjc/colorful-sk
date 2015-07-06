@@ -2,7 +2,7 @@
   <div class="grid">
   <% @feed_items.each do |feed_item| %>
     <div class="grid-item">
-      <%= link_to image_tag(feed_item.picture.url), "#", class: "thumbnail" if feed_item.picture? %>
+      <%= link_to image_tag(feed_item.picture.url), feed_item.picture.url, class: "thumbnail", target: "_blank" if feed_item.picture? %>
       <!--<div class="caption">
         <p>
           <%= feed_item.content %>
