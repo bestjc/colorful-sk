@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= isotope.pkgd
 //= require fit-columns
-//= require bootstrap
 //= require turbolinks
 //= require_tree .
 $(document).ready( function() {
