@@ -18,6 +18,7 @@
 html, body { 
   padding-top: 30px;
   background-color: #E7EAEC;
+  height: 100%;
 }
 
 * {
@@ -26,15 +27,11 @@ html, body {
           box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
-}
-
 
 /* ---- grid ---- */
 
 .grid {
-  position: relative;
+  height: 75%;
 }
 
 /* clear fix */
@@ -47,8 +44,10 @@ body {
 /* ---- .grid-item ---- */
 
 .grid-item {
+  float: left;
   width: 16.666%;
  }
-
-.grid-item img {
- }
+ 
+.thumbnail{
+  margin-bottom: 0px;
+}
