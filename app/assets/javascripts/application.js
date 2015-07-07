@@ -16,32 +16,19 @@
 //= require isotope.pkgd.js
 //= require imagesloaded.pkgd.js
 //= require packery-mode.pkgd.js
-//= require turbolinks
 //= require_tree .
-/*$(document).ready(function() {
-  $('.grid').isotope({
-    layoutMode: 'packery',
-    itemSelector: '.grid-item',
-    packery: {
-      columnWidth: 16.666%,
-      gutter: 15
-    }
-  });
-});**/
-docReady( function() {
-
+docReady(function(){
   var grid = document.querySelector('.grid');
   var iso;
 
-  imagesLoaded( grid, function() {
+  imagesLoaded(grid, function() {
     // init Isotope after all images have loaded
     iso = new Isotope( grid, {
       layoutMode: 'packery',
       itemSelector: '.grid-item',
       packery: {
-        gutter: 15
+        gutter: 8.5
       }
     });
   });
-  
 });
