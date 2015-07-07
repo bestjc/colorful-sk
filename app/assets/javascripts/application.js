@@ -13,16 +13,35 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require isotope.pkgd
-//= require packery-mode.pkgd
+//= require isotope.pkgd.js
+//= require imagesloaded.pkgd.js
+//= require packery-mode.pkgd.js
 //= require turbolinks
 //= require_tree .
-$(document).ready(function() {
+/*$(document).ready(function() {
   $('.grid').isotope({
     layoutMode: 'packery',
     itemSelector: '.grid-item',
     packery: {
+      columnWidth: 16.666%,
       gutter: 15
     }
   });
+});**/
+docReady( function() {
+
+  var grid = document.querySelector('.grid');
+  var iso;
+
+  imagesLoaded( grid, function() {
+    // init Isotope after all images have loaded
+    iso = new Isotope( grid, {
+      layoutMode: 'packery',
+      itemSelector: '.grid-item',
+      packery: {
+        gutter: 15
+      }
+    });
+  });
+  
 });

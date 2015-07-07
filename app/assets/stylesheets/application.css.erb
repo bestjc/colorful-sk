@@ -19,6 +19,7 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+html { overflow-y: scroll; }
 
 /* inherit height from window */
 html, body { 
@@ -34,6 +35,7 @@ body {
 
 .grid {
   background: #DDD;
+  max-width: 100%;
 }
 
 /* clear fix */
@@ -46,16 +48,17 @@ body {
 /* ---- .grid-item ---- */
 
 .grid-item{
-  float: left;
   width: 236px;
-  background: #DDD;
+  float: left;
   border: 1px solid #white;
   border-color: hsla(0, 0%, 0%, 0.7);
 }
 
 .grid-item a img {
-  width: 236px;
+  display: block;
+  max-width: 100%;
 }
+
 
 .thumbnail {
   margin-bottom: 0px;

@@ -5,7 +5,7 @@
         <%= image_tag("logo.png") %>
       </a>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "首页",     root_path %></li>
+        <li><%= link_to "首页",     root_url %></li>
         <li><%= link_to "帮助",     help_path %></li>
         <% if logged_in? %>
           <li><%= link_to "用户", users_path %></li>
