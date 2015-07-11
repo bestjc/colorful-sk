@@ -4,18 +4,16 @@
     <div class="grid-sizer"></div>
     <div class="grid-item">
       <%= link_to image_tag(feed_item.picture.url), feed_item.picture.url, class: "thumbnail", target: "_blank" if feed_item.picture? %>
-      <!--<div class="caption">
-        <p>
+      <div style="margin: 5px;">
+        <div>
           <%= feed_item.content %>
-        </p>
-        <p style="float:right;">
-          ----From @<%= link_to feed_item.user.name, feed_item.user %>
-        </p>
-        <button class="btn btn-default btn-block" role="botton">采集</button>
-    <!--<a href="#" class="btn btn-default" role="button">Button</a>
-      </div>-->
+        </div>
+        <div style="float:right;">
+          ----From <%= link_to feed_item.user.name, feed_item.user %>
+        </div>
+      </div>
     </div>
   <% end %>
   </div>
-  <!--<%= will_paginate @feed_items %>-->
+  <%= will_paginate @feed_items %>
 <% end %>

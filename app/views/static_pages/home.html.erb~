@@ -1,7 +1,18 @@
 <% if logged_in? %>
-    <div class="row">
-      <%= render 'shared/feed' %>
+  <!--<div class="container panel_top">
+    <div class="thumbnail user_info">
+      <%= render 'shared/user_info' %>
+      <%= render 'shared/stats' %>
+      <div class="caption">
+        <p>
+          <button type"button" class="btn btn-success btn-block" data-toggle="modal" data-target="#postModal">分　享</button>
+        </p>
+      </div>
     </div>
+  </div>-->
+  <div class="container user_show">
+    <%= render 'shared/feed' %>
+  </div>
     <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-                                              labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -22,17 +33,19 @@
       </div>
     </div>
 <% else %>
-  <div class="container" style="margin-top:150px;">
-    <div class="row">
-      <div class="col-md-12 text-center">  
-        <h1 class="cover-heading">欢迎来到 Colorful-SK</h1>
-        <p class="lead">
-          better work, better life, just enjoy it.
-        </p>
-        <p class="lead">
-          <%= link_to "注册", signup_path, class: "btn btn-lg btn-primary" %>
-        </p>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">  
+            <h1 class="cover-heading">欢迎来到 Colorful-SK</h1>
+            <p class="lead">
+              better work, better life, just enjoy it.
+            </p>
+            <p class="lead">
+              <%= link_to "注册", signup_path, class: "btn btn-lg btn-primary" %>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 <% end %>

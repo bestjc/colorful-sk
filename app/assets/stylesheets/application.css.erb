@@ -23,33 +23,22 @@
 /* inherit height from window */
 html, body {
   background: #E7EAEC;
-}
-html { overflow-y: scroll; }
-
-.jumbotron {
-  width: 100%;
-  position: absolute;
-  height: 100%;
-  margin-bottom: 0;
-  background-image: url(<%= asset_path 'bg.jpg' %>);
-  color: white;
-  padding-top: 150px;
-}
-.jumbotron h1{
-  font-size: 48px;
+  padding-top: 30px;
 }
 
 .container {
-  width: 1244px;
+  width: 94.5%;
+}
+
+.fx_btn {
+  padding-top: 7px;
 }
 
 .panel_top {
   margin-top: 60px;
 }
 
-.user_show{
-  margin-top: 10px;
-}
+
 /* ---- grid ---- */
 
 .grid {
@@ -66,6 +55,7 @@ html { overflow-y: scroll; }
 /* ---- .grid-item ---- */
 
 .grid-item{
+  background-color: white;
   width: 236px;
   float: left;
   border: 1px solid #white;
@@ -80,6 +70,7 @@ html { overflow-y: scroll; }
 
 .thumbnail {
   margin-bottom: 0px;
+  padding: 0px;
 }
 .thunbnail a:visited,a:hover{
   background-color: transparent;

@@ -1,15 +1,4 @@
 <% if logged_in? %>
-  <div class="container panel_top">
-    <div class="thumbnail user_info">
-      <%= render 'shared/user_info' %>
-      <%= render 'shared/stats' %>
-      <div class="caption">
-        <p>
-          <button type"button" class="btn btn-success btn-block" data-toggle="modal" data-target="#postModal">分　享</button>
-        </p>
-      </div>
-    </div>
-  </div>
   <div class="container user_show">
     <%= render 'shared/feed' %>
   </div>
@@ -25,10 +14,6 @@
               <%= render 'shared/micropost_form' %>
             </section>
           </div>
-          <!--<div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Post Share</button>
-          </div>-->
         </div>
       </div>
     </div>
