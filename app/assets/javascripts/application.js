@@ -19,10 +19,10 @@
 //= require_tree .
 
 docReady(function(){
-  var windowWidth = document.body.offsetWidth;
-  if (1440 < windowWidth < 1601) {
+  var windowWidth = document.body.clientWidth;
+  if (windowWidth == 1600) {
     $(".container").css("width", "94.5%");
-  } else if (1600 < windowWidth < 1901) { 
+  } else if (windowWidth == 1900) { 
     $(".container").css("width", "78.6%");
   } else { 
     $(".container").css("width", "87.4%");
