@@ -17,17 +17,25 @@
 //= require imagesloaded.pkgd.js
 //= require packery-mode.pkgd.js
 //= require_tree .
+
 docReady(function(){
+  var windowWidth = document.body.offsetWidth;
+  if (1440 < windowWidth < 1601) {
+    $(".container").css("width", "94.5%");
+  } else if (1600 < windowWidth < 1901) { 
+    $(".container").css("width", "78.6%");
+  } else { 
+    $(".container").css("width", "87.4%");
+  }
   var grid = document.querySelector('.grid');
   var iso;
-
   imagesLoaded(grid, function() {
     // init Isotope after all images have loaded
     iso = new Isotope( grid, {
       layoutMode: 'packery',
       itemSelector: '.grid-item',
       packery: {
-        gutter: 8.5
+        gutter: 10
       }
     });
   });
