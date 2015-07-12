@@ -22,7 +22,7 @@ docReady(function(){
   var windowWidth = document.body.clientWidth;
   if (windowWidth == 1600) {
     $(".container").css("width", "94.5%");
-  } else if (windowWidth == 1900) { 
+  } else if (windowWidth > 1900) { 
     $(".container").css("width", "78.6%");
   } else { 
     $(".container").css("width", "87.4%");
