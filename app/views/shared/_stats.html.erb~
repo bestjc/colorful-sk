@@ -12,10 +12,8 @@
     </strong>
     粉丝
   </a>
-  <a>
     <strong>
     	<%= @user.microposts.count %>
     </strong>
     分享
-  </a>
 </div>
