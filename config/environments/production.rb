@@ -71,7 +71,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'qq.com',
     user_name:            '244405035@qq.com',
-    password:             'cw123123',
+    password:             '<pwd>',
     authentication:       'login',
     enable_starttls_auto: true
   }
